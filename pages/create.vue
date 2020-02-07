@@ -1,5 +1,5 @@
 <template>
   <div class="b-container" fluid="sm">
-    <h1>Events</h1>
+    <h1>Create An Event</h1>
   </div>
 </template>
