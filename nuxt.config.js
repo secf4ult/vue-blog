@@ -1,3 +1,13 @@
+// only add router base when it's deployed to github pages
+const routerBase =
+  process.env.DEPLOY_ENV === 'GH_PAGES'
+    ? {
+        router: {
+          base: '/vue-blog/'
+        }
+      }
+    : {}
+
 module.exports = {
   mode: 'universal',
   /*
@@ -16,6 +26,7 @@ module.exports = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
+  ...routerBase,
   /*
    ** Customize the progress-bar color
    */
